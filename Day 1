@@ -7,10 +7,16 @@ class Main {
     int arr[] = {1,5,2,8,4,9,6};
     int target = 15;
     int[] result = sumTofindTarget(arr, target);
-   // System.out.println(result[0] + "And" + result[1]);
         System.out.println(Arrays.toString(result));
+    
+    int[] result1 = twoPointerTech(arr,target);
+    System.out.println(Arrays.toString(result1));
+    
+    int[] result2 = getUsingHashMap(arr,target);
+    System.out.println(Arrays.toString(result2));
 
     }
+    //Native approach
     public  static int[] sumTofindTarget(int[] arr, int target){
         
         int len = arr.length;
@@ -26,6 +32,45 @@ class Main {
         }
         return null;
     }
-
+    
+    //Two pointer Technique
+    public static int[] twoPointerTech(int[] arr, int target){
+        //{1,5,2,8,4,9,6}
+        int left = 0;
+        int right = arr.length -1;
+        
+        for(int i =0; i<arr.length; i++){
+            
+            while(left<right){
+                if(arr[left]+ arr[right] == target)
+                    return new int[]{left,right};
+                else if(arr[left]+ arr[right] < target){
+                    left ++;
+                }
+                else
+                  right--;
+                }
+        }
+        return null;
     }
-
+    
+    
+     //HashMap
+    
+    public static int[] getUsingHashMap(int[] arr,int target){
+        
+        Map<Integer, Integer> map = new HashMap<>();
+        
+        for(int i=0; i< arr.length; i++){
+            
+            int diff = target - arr[i];
+            
+            if(map.containsKey(diff)){
+                return new int[]{map.get(diff),i};
+            }
+            map.put(arr[i],i);
+        }
+        return null;
+    }
+    
+    }
