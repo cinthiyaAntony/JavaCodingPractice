@@ -36,3 +36,49 @@ class Main {
     }
     
 }
+
+//
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr= {2,3,4,5,6,7,8,9};
+        int target =100;
+        
+        List<int[]> allpairs = getTargetIndex(arr, target);
+        
+        if(allpairs != null && !allpairs.isEmpty()){   //here we added one more condition 
+            System.out.println("List of indexes: ");
+            for(int[] result  : allpairs){
+                System.out.println(Arrays.toString(result));
+            }
+        }
+            
+         else
+            System.out.println("no indexes found");
+        }
+
+
+
+    public static List<int[]> getTargetIndex(int[] arr, int target){
+        
+        List<int[]> list = new ArrayList<>();
+        
+        for(int i=0; i< arr.length; i++){
+            for(int j=1; j< arr.length; j++){
+                
+                if(arr[i] + arr[j] == target){
+                    list.add(new int[]{i,j});
+                }
+            }
+        }
+        return list;
+        
+    }
+    
+}
+
+
+
