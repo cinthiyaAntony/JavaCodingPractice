@@ -1,0 +1,27 @@
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+     int[] arr1 = {4,7,8,9};
+     int[] arr2 = {8,22,4,78,9,11};
+    System.out.println(findCommonElement(arr1, arr2));
+        
+    }
+    
+    public static ArrayList<Integer> findCommonElement(int[] arr1, int[] arr2){
+        
+        ArrayList<Integer> newArr = new ArrayList<>();
+        for(int i=0; i< arr1.length; i++){
+            
+            for(int j = 0; j < arr2.length; j++){
+                if(arr1[i] == arr2[j]){
+                    if(!newArr.contains(arr1[i])){
+                        newArr.add(arr1[i]);
+                    }
+                }
+            }
+            }
+    return newArr;
+    }
+}
