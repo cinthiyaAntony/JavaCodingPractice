@@ -1,0 +1,23 @@
+//Without Recursion
+
+import java.util.*;
+
+class Main{
+
+public static void mani(String[] arg){
+  String str = "Banana";
+  printAllCharacters(str);
+}
+
+public static void printAllCharacters(String str){
+
+  char[] c = str.toCharArray();
+ for(char ch: c){
+   System.out.println(ch);
+}
+}
+}
+
+
+//With Recursion
+
