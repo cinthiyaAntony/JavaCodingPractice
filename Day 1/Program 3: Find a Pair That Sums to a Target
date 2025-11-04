@@ -7,3 +7,5 @@ Approach:
 * use a HashSet instead of sorting, to find pairs in O(n) without ordering
 
 * Without two pointers, a brute-force approach (nested loops) would take O(n²) time
+
+----------------------------------------------------------------------------------------------------------------------------------------
