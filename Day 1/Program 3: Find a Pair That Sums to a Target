@@ -9,3 +9,14 @@ Approach:
 * Without two pointers, a brute-force approach (nested loops) would take O(n²) time
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+1. Two pointer technique
+
+Class main{
+
+public static void main(Strings[] arg){
+
+
+}
+
+
+}
