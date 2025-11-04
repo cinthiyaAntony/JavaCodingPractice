@@ -1,4 +1,4 @@
-**Day 1:** 
+**Day 1: *Easy DSA with JAVA* 
 
 Program 1: Find the Maximum Number in an Array
 
