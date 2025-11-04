@@ -1,0 +1,9 @@
+Program 3: Find a Pair That Sums to a Target
+
+Approach:
+* What if the array isn’t sorted? 
+   If your array is unsorted, Sort it first → then apply the two-pointer method (O(n log n) for sorting + O(n) for two pointers).
+
+* use a HashSet instead of sorting, to find pairs in O(n) without ordering
+
+* Without two pointers, a brute-force approach (nested loops) would take O(n²) time
